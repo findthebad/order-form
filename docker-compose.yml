@@ -1,0 +1,29 @@
+version: "3"
+services:
+  elasticsearch-order-form:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.8.0
+    container_name: elasticsearch-order-form
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+  kibana-order-form:
+    image: docker.elastic.co/kibana/kibana-oss:7.8.0
+    container_name: kibana-order-form
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch-order-form:9200
+    ports:
+      - 5601:5601
+  loader-order-form:
+    build: ./loader
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch-order-form:9200
+    depends_on:
+      - elasticsearch-order-form
+      - kibana-order-form
