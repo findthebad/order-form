@@ -22,6 +22,8 @@ def insert_data(es_writer, data_dir="data/"):
                 # These are items from Kibana we don't care about importing
                 if (
                     not log["_id"].startswith("application_usage_transactional")
+                    and not log["_id"].startswith("application_usage_daily")
+                    and not log["_id"].startswith("search-telemetry")
                     and not log["_id"].startswith("ui-metric")
                     and not log["_id"].startswith("telemetry")
                 ):
