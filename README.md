@@ -27,6 +27,7 @@ This lab is built around using Kibana for identifying and investigating signs of
 - [Sysmon Event ID 15](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-15-filecreatestreamhash)
 - [Kibana Query Language](https://www.elastic.co/guide/en/kibana/current/kuery-query.html)
 - [MITRE - ATT&CK - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)
+- [MITRE - ATT&CK - Process Injection](https://attack.mitre.org/techniques/T1055/)
 
 ### Solution
 Available [here](https://findthebad.com/order-form/).
