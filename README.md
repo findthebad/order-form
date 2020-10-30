@@ -16,7 +16,7 @@ This lab is built around using Kibana for identifying and investigating signs of
 
 ### Questions
 1) What is the name of the malicious file that has been flagged by VirusTotal?
-2) What was the original source of this program and who was it run by at what time and on what computer?
+2) What was the original source of this program and who was it run by, at what time, and on what computer?
 3) What persistence mechanism was used by this malware?
 4) What other files were created?
 5) What typically non-malicious process does this malware appear to abuse? How can you tell?
